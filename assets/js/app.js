@@ -46,9 +46,33 @@ let currentItem = 0;
 
 // load init item
 window.addEventListener("DOMContentLoaded", function () {
-  const item = reviews[currentItem];
+  showPerson(currentItem);
+});
+
+// show person based on item
+const showPerson = (person) => {
+  const item = reviews[person];
   img.src = item.img;
   author.textContent = item.name;
   job.textContent = item.job;
   info.textContent = item.text;
+};
+
+// click event for buttons
+// previous person
+prevBtn.addEventListener("click", function () {
+  currentItem--;
+  if (currentItem < 0) {
+    currentItem = reviews.length - 1;
+  }
+  showPerson(currentItem);
+});
+
+// next person
+nextBtn.addEventListener("click", function () {
+  currentItem++;
+  if (currentItem > reviews.length - 1) {
+    currentItem = 0;
+  }
+  showPerson(currentItem);
 });
