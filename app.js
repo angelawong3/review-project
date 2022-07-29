@@ -9,14 +9,14 @@ const reviews = [
   },
   {
     id: 2,
-    name: "Mary",
+    name: "tom",
     job: "web designer",
     img: "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883409/person-2_np9x5l.jpg",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 3,
-    name: "Tom",
+    name: "mary",
     job: "intern",
     img: "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -47,8 +47,4 @@ let currentItem = 0;
 // load init item
 window.addEventListener("DOMContentLoaded", function () {
   const item = reviews[currentItem];
-  img.src = item.img;
-  author.textContent = item.name;
-  job.textContent = item.job;
-  info.textContent = item.text;
 });
